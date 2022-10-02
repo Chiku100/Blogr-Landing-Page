@@ -14,7 +14,6 @@ $("#company").hover(function () {
     $(".arrow2").css("transform", "rotate(180deg)")
 }, function () {
     $(".y").addClass("viz");
-    $(".arrow2").css("transform", "rotate(180deg)")
     $(".arrow2").css("transform", "rotate(0deg)")
 })
 $("#connect").hover(function () {
@@ -22,7 +21,6 @@ $("#connect").hover(function () {
     $(".arrow3").css("transform", "rotate(180deg)")
 }, function () {
     $(".x").addClass("viz");
-    $(".arrow3").css("transform", "rotate(180deg)")
     $(".arrow3").css("transform", "rotate(0deg)")
 })
 
