@@ -1,43 +1,27 @@
-let items = $(".mark");
-let actions = $(".extent");
+let list = ['product', 'company', 'connect'];
+let ids = ["box1", "box2", "box3"];
+let arrows=["arrow1","arrow2","arrow3"]
+let contents = document.querySelectorAll(".extent");
 
-
-$("#product").hover(function () {
-    $(".z").removeClass("viz");
-    $(".arrow1").css("transform", "rotate(180deg)")
-}, function () {
-    $(".z").addClass("viz");
-    $(".arrow1").css("transform", "rotate(0deg)")
-})
-$("#company").hover(function () {
-    $(".y").removeClass("viz");
-    $(".arrow2").css("transform", "rotate(180deg)")
-}, function () {
-    $(".y").addClass("viz");
-    $(".arrow2").css("transform", "rotate(0deg)")
-})
-$("#connect").hover(function () {
-    $(".x").removeClass("viz");
-    $(".arrow3").css("transform", "rotate(180deg)")
-}, function () {
-    $(".x").addClass("viz");
-    $(".arrow3").css("transform", "rotate(0deg)")
-})
-
+for (let i = 0; i < list.length; i++) {
+    $("#" + list[i]).hover(function () {
+        $("#" + ids[i]).removeClass("viz");
+        $("#"+arrows[i]).css("transform", "rotate(180deg)")
+    },function(){
+        $("#" + ids[i]).addClass("viz");
+        $("#"+arrows[i]).css("transform", "rotate(0deg)")
+    })
+}
 $(".trigger").click(
     function () {
         $(".header").toggle();
-        $(".arrow").attr("src","./images/icon-arrow-dark.svg");
+        $(".arrow").attr("src", "./images/icon-arrow-dark.svg");
         if ($(".ham").css("display") == "block") {
             $(".ham").css("display", "none");
             $(".close").css("display", "block");
-            
-
         } else {
             $(".ham").css("display", "block");
             $(".close").css("display", "none");
         }
-
     }
 )
-
